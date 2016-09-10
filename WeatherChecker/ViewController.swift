@@ -105,7 +105,12 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .denied:
-            showBasicAlert(title: "Error!", message: "Please enable this apps location services in settings!")
+            temperatureLabel.text = ""
+            conditionLabel.text = ""
+            dayTimeLabel.text = ""
+            weatherConditionImage.image = nil
+            activityIndicator.isHidden = true
+            showBasicAlert(title: "Error!", message: "Please enable this apps location services in settings then press the refresh button!")
         default:
             break
         }
