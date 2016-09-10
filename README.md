@@ -3,4 +3,4 @@ A very simple app I created that uses the accuweather API to return weather resu
 
 To build and run:
 
-run: pod install
+pod install
